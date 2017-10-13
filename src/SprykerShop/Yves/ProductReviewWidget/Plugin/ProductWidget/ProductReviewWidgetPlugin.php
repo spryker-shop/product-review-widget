@@ -14,20 +14,16 @@ class ProductReviewWidgetPlugin extends AbstractWidgetPlugin implements ProductR
 {
 
     /**
-     * @param int $idProductAbstract
+     * @param float $rating
      *
      * @return void
      */
-    public function initialize(int $idProductAbstract): void
+    public function initialize(float $rating): void
     {
-        $this->addParameter('idProductAbstract', $idProductAbstract);
+        $this->addParameter('rating', $rating);
     }
 
     /**
-     * TODO: add specification
-     *
-     * @api
-     *
      * @return string
      */
     public static function getName(): string
@@ -36,10 +32,6 @@ class ProductReviewWidgetPlugin extends AbstractWidgetPlugin implements ProductR
     }
 
     /**
-     * TODO: add specification
-     *
-     * @api
-     *
      * @return string
      */
     public static function getTemplate(): string
